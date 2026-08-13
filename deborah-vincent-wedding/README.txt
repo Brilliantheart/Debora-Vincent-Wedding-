@@ -1,0 +1,1 @@
+Deborah & Vincent wedding website. Open index.html with Live Server. The 8 supplied photos are already in assets/. Send the real love story, YouTube links and wedding song to finish the remaining sections.

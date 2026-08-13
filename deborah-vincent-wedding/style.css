@@ -1,0 +1,1907 @@
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#dabada;color:#251d29;font-family:"DM Sans",sans-serif}a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}
+:root{
+    --purple:#dbc2ee;
+    --purple-soft:#dec1f0;
+    --purple-dark:#4a3158;
+    --gold:#d674d1;
+    --cream:#c77fd8;
+    --green:#536744;
+}
+header{height:100vh;min-height:680px;position:relative;background:url("assets/gallery-07.jpg") center/cover no-repeat;color:#fff;display:flex;flex-direction:column}.shade{position:absolute;inset:0;background:linear-gradient(#0b061099,#160b20aa 55%,#09040dcc)}nav{position:relative;z-index:2;padding:25px 5%;display:flex;align-items:center;justify-content:space-between}.logo{font:600 34px "Cormorant Garamond"}.logo i{color:#d7ba72}.links{display:flex;gap:30px;text-transform:uppercase;font-size:11px;letter-spacing:2px}.reserve{border:1px solid #ffffff88;border-radius:30px;padding:9px 15px;font-size:11px;text-transform:uppercase;letter-spacing:1px}
+.heroText{position:relative;z-index:2;text-align:center;margin:auto;padding:40px 20px}.heroText small,.welcome small,.heading small,.rsvpCard>small,.palette small,.watchCard>small{letter-spacing:4px;color:#ad7bd8;font-size:11px}.heroText h1{font:500 clamp(60px,10vw,140px)/.82 "Cormorant Garamond";margin:25px 0}.heroText h1 i{color:#d7ba72}.heroText p{letter-spacing:7px}.heroText span{display:block;opacity:.8;margin:8px 0 28px;font-size:13px}.btn{display:inline-block;background:var(--gold);border:0;color:#fff;padding:14px 25px;letter-spacing:2px;font-size:11px;cursor:pointer}.scroll{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:3px;opacity:.7}
+section{padding:105px 7%}.welcome{text-align:center}.welcome small,.heading small,.rsvpCard>small{color:#c563d0}.welcome h2,.heading h2,.watchCard h2,.rsvpCard h2,.palette h2{font:500 clamp(48px,6vw,78px)/.9 "Cormorant Garamond";margin:18px 0 25px}.welcome h2 i,.heading h2 i,.watchCard h2 i,.rsvpCard h2 i,.palette h2 i,footer i{color:var(--gold)}.welcome>p{max-width:620px;margin:auto;color:#756e75}
+/* ==========================================
+   COUNTDOWN CARD
+========================================== */
+
+.countdown-card {
+    max-width: 1500px;
+    margin: 60px auto 0;
+
+    padding: 45px 50px;
+
+    background: #1e0b1e;
+
+    border: 1px solid rgba(200, 167, 95, .35);
+
+    box-shadow:
+        0 20px 60px rgba(159, 99, 193, 0.08);
+
+    position: relative;
+}
+
+
+/* GOLD CORNERS */
+
+.countdown-card::before,
+.countdown-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 45px;
+    height: 45px;
+
+    border-color: #c8a75f;
+}
+
+.countdown-card::before {
+    top: 12px;
+    left: 12px;
+
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
+
+.countdown-card::after {
+    right: 12px;
+    bottom: 12px;
+
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+}
+
+
+/* TITLE */
+
+.countdown-card > small {
+    display: block;
+
+    color: #ede3cf;
+
+    font-size: 20px;
+
+    letter-spacing: 4px;
+}
+
+
+/* COUNTING NUMBERS */
+
+.count {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    max-width: 1000px;
+
+    margin: 35px auto 25px;
+}
+
+
+/* EACH UNIT */
+
+.time-unit {
+    position: relative;
+
+    text-align: center;
+}
+
+.time-unit:not(:last-child)::after {
+    content: ":";
+
+    position: absolute;
+
+    right: 0;
+
+    top: 5px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 35px;
+
+    color: #c8a75f;
+}
+
+
+/* NUMBER */
+
+.time-unit b {
+    display: block;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 150px;
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    color: #b792cc;
+}
+
+
+/* LABEL */
+
+.time-unit span {
+    display: block;
+
+    margin-top: 9px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #8c818f;
+}
+
+
+/* DATE */
+
+.countdown-date {
+    color: #c8a75f;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 20px;
+
+    letter-spacing: 5px;
+
+    margin-top: 25px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px) {
+
+    .countdown-card {
+        padding: 40px 15px;
+        margin-top: 45px;
+    }
+
+    .count {
+        margin-top: 30px;
+    }
+
+    .time-unit b {
+        font-size: 36px;
+    }
+
+    .time-unit span {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .time-unit:not(:last-child)::after {
+        font-size: 25px;
+        top: 2px;
+    }
+
+    .countdown-date {
+        font-size: 17px;
+        letter-spacing: 3px;
+    }
+}
+.heading{max-width:850px;margin:0 auto 50px}.story{max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:center}.story img{width:100%;aspect-ratio:4/5;object-fit:cover}.story label{color:#c16cd4;font:22px "Cormorant Garamond"}.story h3{font:500 48px "Cormorant Garamond";line-height:.95}.story p{color:#c9c0cd;line-height:1.8}.story strong{display:block;color:#dfc27b;font:italic 28px "Cormorant Garamond";margin-top:30px}.center{text-align:center}
+/* ================================
+   GALLERY SECTION
+================================ */
+
+.gallery {
+    background: #9a52a2;
+    color: #4a3158;
+    padding: 100px 7%;
+}
+
+.gallery .heading h2 {
+    color: #aa8fb9;
+}
+
+.gallery .heading h2 i {
+    color: #c8a75f;
+}
+
+.gallery .heading small {
+    color: #8e7038;
+}
+
+.grid {
+    max-width: 1250px;
+    margin: 55px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-auto-rows: 260px;
+    gap: 12px;
+}
+
+.pic {
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    cursor: pointer;
+
+    background: transparent;
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .5s ease;
+}
+
+.pic:hover img {
+    transform: scale(1.06);
+}
+/* ================================
+   WATCH OUR JOURNEY
+================================ */
+
+.watch {
+    background: #f2f2dd;
+    color: #4a3158;
+
+    padding: 110px 7%;
+
+    text-align: center;
+}
+
+.watchCard {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 70px 40px;
+
+    background: #f7f1fa;
+
+    border: 1px solid rgba(200,167,95,.45);
+
+    box-shadow:
+        0 20px 60px rgba(74,49,88,.10);
+}
+
+.watchCard .play {
+    width: 70px;
+    height: 70px;
+
+    border: 1px solid #c8a75f;
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    margin: 0 auto 25px;
+
+    color: #8e7038;
+
+    transition: .3s ease;
+}
+
+.watchCard .play:hover {
+    background: #c8a75f;
+    color: white;
+}
+
+.watchCard > small {
+    color: #8e7038;
+
+    letter-spacing: 4px;
+
+    font-size: 10px;
+}
+
+.watchCard h2 {
+    color: #4a3158;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: clamp(48px, 6vw, 75px);
+
+    font-weight: 500;
+
+    line-height: .9;
+
+    margin: 20px 0 25px;
+}
+
+.watchCard h2 i {
+    color: #c8a75f;
+}
+
+.watchCard p {
+    color: #75677d;
+
+    max-width: 600px;
+
+    margin: 0 auto 12px;
+
+    line-height: 1.8;
+}
+
+.watchCard .note {
+    font-size: 12px;
+
+    color: #95859d;
+}
+/* ================================
+   EVENTS SECTION
+================================ */
+
+.events {
+    background: #eee3d4;
+
+    color: #4a3158;
+
+    padding: 110px 7%;
+}
+
+.events .heading h2 {
+    color: #4a3158;
+}
+
+.events .heading h2 i {
+    color: #c8a75f;
+}
+
+.events .heading small {
+    color: #8e7038;
+}
+
+
+/* EVENT CARDS */
+
+.eventGrid {
+    max-width: 1000px;
+
+    margin: 55px auto 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.eventGrid article {
+    text-align: center;
+
+    background: #faf2fa;
+
+    border: 1px solid rgba(200,167,95,.4);
+
+    padding: 60px 25px;
+
+    box-shadow:
+        0 15px 40px rgba(74,49,88,.07);
+
+    transition: .3s ease;
+}
+
+.eventGrid article:hover {
+    transform: translateY(-5px);
+}
+
+.eventGrid b {
+    font:
+        500 45px
+        "Cormorant Garamond";
+
+    color: #c8a75f;
+}
+
+.eventGrid h3 {
+    font:
+        500 35px
+        "Cormorant Garamond";
+
+    margin: 5px;
+
+    color: #4a3158;
+}
+
+.eventGrid p {
+    color: #75677d;
+
+    margin-bottom: 25px;
+}
+
+.eventGrid a {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #8e7038;
+}
+.palette{padding:0;background:#3a1c3d;display:grid;grid-template-columns:1fr 1fr}.palette>div{padding:100px 10%;align-self:center}.palette img{width:100%;height:100%;min-height:520px;object-fit:cover}.swatches{display:flex;gap:10px;margin-top:25px}.swatches span{width:38px;height:38px;border-radius:50%;border:3px solid #fff}.swatches span:nth-child(1){background:#2a1645}.swatches span:nth-child(2){background:#c8a75f}.swatches span:nth-child(3){background:#f7f3ec}.swatches span:nth-child(4){background:#536744}
+.rsvp{background:#ebdbef}.rsvpCard{max-width:760px;margin:auto;text-align:center}.rsvpCard>p{color:#777}.rsvp form{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px}.rsvp input,.rsvp select,.rsvp textarea{padding:14px;border:1px solid #ded7cb;background:#c2b6c8;outline:0}.rsvp textarea,.rsvp .btn{grid-column:1/-1}.rsvp textarea{resize:vertical}
+footer{background:#160c22;color:white;text-align:center;padding:70px 20px}footer h2{font:500 55px "Cormorant Garamond";margin:0}footer p{color:#aaa}footer div{display:flex;justify-content:center;gap:22px;font-size:10px;text-transform:uppercase;letter-spacing:2px}
+#lightbox{display:none;position:fixed;inset:0;background:#07030deF;z-index:100;place-items:center;padding:30px}#lightbox.show{display:grid}#big{max-width:92vw;max-height:90vh}#close{position:absolute;right:20px;top:10px;background:none;border:0;color:#fff;font-size:50px}
+@media(max-width:800px){.links{display:none}.heroText h1{font-size:65px}.count{gap:18px}.count b{font-size:35px}.story,.eventGrid,.palette{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:210px}.palette img{min-height:420px}.palette>div{padding:75px 8%}.rsvp form{grid-template-columns:1fr}.rsvp textarea,.rsvp .btn{grid-column:auto}section{padding:80px 5%}}
+/* =========================================
+   RESERVATION COORDINATORS
+========================================= */
+
+.rsvp-intro {
+    max-width: 620px;
+    margin: 0 auto 45px;
+    color: #777;
+    line-height: 1.8;
+}
+
+.reservation-team {
+    max-width: 900px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* COORDINATOR CARD */
+
+.coordinator {
+    background: #e3b3e0;
+
+    border: 1px solid #e2d8c8;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    text-align: left;
+
+    transition: all .3s ease;
+}
+
+.coordinator:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(42, 22, 69, .10);
+}
+
+
+/* PHOTO */
+
+.coordinator-photo {
+    width: 120px;
+    height: 120px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 4px solid #c8a75f;
+
+    background: #eee;
+}
+
+.coordinator-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* INFORMATION */
+
+.coordinator-info h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 32px;
+
+    font-weight: 500;
+
+    margin: 0 0 2px;
+
+    color: #2a1645;
+}
+
+.coordinator-info p {
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+    color: #888;
+
+    margin: 0 0 15px;
+}
+
+
+/* WHATSAPP BUTTON */
+
+.whatsapp-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: #2a1645;
+
+    color: white;
+
+    padding: 11px 16px;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    transition: all .25s ease;
+}
+
+.whatsapp-btn:hover {
+    background: #c8a75f;
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+.whatsapp-btn span {
+    font-size: 15px;
+}
+
+
+/* PHONE NUMBER */
+
+.phone-number {
+    display: block;
+
+    margin-top: 9px;
+
+    color: #120513;
+
+    font-size: 11px;
+}
+
+
+/* DIVIDER */
+
+.reservation-divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    max-width: 600px;
+
+    margin: 55px auto 30px;
+
+    color: #b9a98e;
+}
+
+.reservation-divider::before,
+.reservation-divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #ded5c7;
+}
+
+.reservation-divider span {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+/* FORM HEADING */
+
+.form-heading {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 50px;
+    color: #c8a75f;
+    margin-bottom: 20px;
+}
+.form-heading {
+    color: #2b0631 !important;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .reservation-team {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .coordinator {
+        padding: 18px;
+
+        gap: 18px;
+    }
+
+    .coordinator-photo {
+        width: 95px;
+        height: 95px;
+    }
+
+    .coordinator-info h3 {
+        font-size: 28px;
+    }
+
+    .whatsapp-btn {
+        font-size: 9px;
+
+        padding: 10px 12px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .coordinator {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 25px 15px;
+    }
+
+    .coordinator-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .coordinator-info {
+        width: 100%;
+    }
+
+    .phone-number {
+        text-align: center;
+    }
+
+}
+/* ==========================================
+   LOVE STORY SECTION
+========================================== */
+
+.story-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.story-intro {
+    max-width: 750px;
+    margin: 20px auto 0;
+    color: #200606;
+    line-height: 1.8;
+    font-size: 20px;
+}
+
+
+/* STORY CARDS */
+
+.story-cards {
+    max-width: 1100px;
+    margin: 70px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+.story-card {
+    background: #21132f;
+
+    border: 1px solid rgba(200, 167, 95, .25);
+
+    overflow: hidden;
+
+    transition: transform .4s ease,
+                box-shadow .4s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.25);
+}
+
+
+/* IMAGE */
+
+.story-card-image {
+    height: 430px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.story-card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .7s ease;
+}
+
+.story-card:hover .story-card-image img {
+    transform: scale(1.05);
+}
+
+.story-number {
+    position: absolute;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    background: #c8a75f;
+
+    color: #fff;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+}
+
+
+/* CARD CONTENT */
+
+.story-card-content {
+    padding: 35px;
+}
+
+.story-card-content small {
+    color: #d8bf7b;
+
+    letter-spacing: 3px;
+
+    font-size: 10px;
+}
+
+.story-card-content h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 48px;
+
+    font-weight: 500;
+
+    line-height: .9;
+
+    margin: 15px 0 20px;
+}
+
+.story-card-content h3 i {
+    color: #c8a75f;
+}
+
+.story-preview {
+    color: #c4bac9;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* READ BUTTON */
+
+.story-button {
+    border: 1px solid #c8a75f;
+
+    background: transparent;
+
+    color: #d8bf7b;
+
+    padding: 13px 20px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: all .3s ease;
+}
+
+.story-button span {
+    margin-left: 12px;
+
+    font-size: 15px;
+}
+
+.story-button:hover {
+    background: #c8a75f;
+
+    color: #fff;
+}
+
+
+/* STORY ENDING */
+
+.story-ending {
+    max-width: 800px;
+
+    margin: 100px auto 0;
+
+    text-align: center;
+
+    padding-top: 80px;
+
+    border-top: 1px solid rgba(200,167,95,.2);
+}
+
+.story-ending small {
+    color: #d8bf7b;
+
+    letter-spacing: 4px;
+
+    font-size: 10px;
+}
+
+.story-ending h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    font-weight: 500;
+
+    line-height: .95;
+
+    margin: 20px 0;
+}
+
+.story-ending h3 i {
+    color: #c8a75f;
+}
+
+.story-ending p {
+    color: #bdb2c4;
+
+    max-width: 600px;
+
+    margin: auto;
+
+    line-height: 1.8;
+}
+
+.story-quote {
+    margin-top: 45px;
+
+    color: #d8bf7b;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 30px;
+
+    font-style: italic;
+
+    line-height: 1.2;
+}
+
+
+/* ==========================================
+   STORY MODAL
+========================================== */
+
+.story-modal {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(7,3,13,.96);
+
+    z-index: 200;
+
+    display: none;
+
+    overflow-y: auto;
+
+    padding: 40px 20px;
+}
+
+.story-modal.show {
+    display: block;
+}
+
+.story-modal-inner {
+    position: relative;
+
+    max-width: 850px;
+
+    margin: auto;
+
+    background: #f7f3ec;
+
+    color: #251d29;
+
+    padding: 80px 90px;
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.5);
+}
+
+.story-modal-inner > small {
+    color: #8e7038;
+
+    letter-spacing: 4px;
+
+    font-size: 10px;
+}
+
+.story-modal-inner h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(48px, 6vw, 75px);
+
+    font-weight: 500;
+
+    line-height: .9;
+
+    margin: 20px 0 55px;
+}
+
+.story-modal-inner h2 i {
+    color: #c8a75f;
+}
+
+.story-close {
+    position: absolute;
+
+    top: 18px;
+    right: 22px;
+
+    border: 0;
+
+    background: transparent;
+
+    font-size: 40px;
+
+    color: #2a1645;
+
+    cursor: pointer;
+}
+
+.story-text {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+}
+
+.story-text p {
+    margin: 0 0 25px;
+}
+
+.story-text strong {
+    color: #2a1645;
+}
+
+.story-text blockquote {
+    border-left: 2px solid #c8a75f;
+
+    margin: 35px 0;
+
+    padding: 5px 25px;
+
+    color: #5a4665;
+
+    font-style: italic;
+
+    font-size: 26px;
+}
+
+.story-text .funny {
+    color: #8e7038;
+
+    font-size: 30px;
+
+    font-weight: 600;
+}
+
+.story-text .emphasis {
+    text-align: center;
+
+    color: #2a1645;
+
+    font-size: 30px;
+
+    font-style: italic;
+}
+
+.final-love {
+    color: #2a1645;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 32px;
+
+    font-style: italic;
+
+    margin-top: 45px;
+}
+
+.forever {
+    text-align: center;
+
+    color: #2a1645;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 42px;
+
+    font-weight: 500;
+
+    margin-top: 45px;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 800px) {
+
+    .story-section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .story-cards {
+        grid-template-columns: 1fr;
+
+        margin-top: 50px;
+    }
+
+    .story-card-image {
+        height: 380px;
+    }
+
+    .story-card-content {
+        padding: 28px;
+    }
+
+    .story-card-content h3 {
+        font-size: 42px;
+    }
+
+    .story-ending {
+        margin-top: 70px;
+
+        padding-top: 60px;
+    }
+
+    .story-modal {
+        padding: 10px;
+    }
+
+    .story-modal-inner {
+        padding: 65px 25px 45px;
+    }
+
+    .story-modal-inner h2 {
+        font-size: 50px;
+
+        margin-bottom: 35px;
+    }
+
+    .story-text {
+        font-size: 18px;
+
+        line-height: 1.65;
+    }
+
+    .story-text blockquote {
+        font-size: 23px;
+
+        padding-left: 18px;
+    }
+
+}
+/* ==========================================
+   LOVE STORY - SIDE BY SIDE
+========================================== */
+
+.love-story {
+    padding: 110px 6%;
+}
+
+.story-intro {
+    max-width: 550px;
+    margin: 20px auto 0;
+    color: #ddd8e1;
+    line-height: 1.8;
+}
+
+
+/* TWO STORIES */
+
+.story-columns {
+    max-width: 1250px;
+    margin: 70px auto 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+
+    gap: 55px;
+
+    position: relative;
+}
+
+
+/* PERSON */
+
+.person-story {
+    min-width: 0;
+}
+
+
+/* PHOTO */
+
+.story-photo {
+    width: 100%;
+    height: 480px;
+
+    overflow: hidden;
+
+    margin-bottom: 35px;
+
+    position: relative;
+}
+
+.story-photo::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(22,12,34,.45),
+            transparent 40%
+        );
+}
+
+.story-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .7s ease;
+}
+
+.person-story:hover .story-photo img {
+    transform: scale(1.035);
+}
+
+
+/* STORY TEXT */
+
+.story-content {
+    max-width: 520px;
+}
+
+.person-story:nth-child(3) .story-content {
+    margin-left: auto;
+}
+
+.story-content > small {
+    color: #deeef1;
+
+    letter-spacing: 4px;
+
+    font-size: 50px;
+}
+
+.story-content h3 {
+    color: var(--purple-dark);
+}
+
+.story-content p {
+    color: #66556f;
+}
+
+.story-content .story-opening {
+    color: var(--purple-dark);
+}
+
+.story-content .quote {
+    color: #8e7038;
+}
+
+.story-content blockquote {
+    color: var(--purple-dark);
+    border-left-color: var(--gold);
+}
+
+/* CENTER DIVIDER */
+
+.story-divider {
+    background: rgba(74,49,88,.25);
+}
+
+.story-divider span {
+    background: var(--purple);
+    border-color: var(--gold);
+}
+
+
+/* READ MORE */
+
+.story-read {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 10px;
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid #c8a75f;
+
+    color: #c7eef0;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    transition: all .3s ease;
+}
+
+.story-read span {
+    font-size: 20px;
+
+    transition: transform .3s ease;
+}
+
+.story-read:hover {
+    color: white;
+}
+
+.story-read:hover span {
+    transform: translateX(5px);
+}
+
+
+/* ==========================================
+   STORY ENDING
+========================================== */
+
+.story-ending {
+    border-top:1px solid rgba(74,49,88,.2);
+}
+
+.story-ending p {
+    color:#66556f;
+}
+
+.story-final-quote {
+    color:#8e7038;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 800px) {
+
+    .love-story {
+        padding: 80px 5%;
+    }
+
+    .story-columns {
+        display: block;
+
+        margin-top: 50px;
+    }
+
+    .person-story {
+        margin-bottom: 70px;
+    }
+
+    .story-divider {
+        display: none;
+    }
+
+    .story-photo {
+        height: 430px;
+    }
+
+    .story-content {
+        max-width: none;
+    }
+
+    .story-content h3 {
+        font-size: 50px;
+    }
+
+    .story-ending {
+        margin-top: 30px;
+
+        padding-top: 60px;
+    }
+
+}
+/* ==========================================
+   WEDDING TEAM
+========================================== */
+
+.wedding-team {
+    background: #c6afd5;
+    color: #4a3158;
+}
+
+.team-intro {
+    max-width: 650px;
+    margin: 20px auto 0;
+    color: #75677d;
+    line-height: 1.8;
+}
+
+
+/* TEAM GRID */
+
+.team-grid {
+    max-width: 1200px;
+    margin: 65px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* TEAM MEMBER */
+
+.team-member {
+    background: #faf7f2;
+
+    border: 1px solid rgba(200,167,95,.25);
+
+    text-align: center;
+
+    padding-bottom: 30px;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 20px 45px rgba(74,49,88,.12);
+}
+
+
+/* RSVP CONTACTS */
+
+.featured-contact {
+    border-top: 3px solid #c8a75f;
+}
+
+
+/* PHOTO */
+
+.team-photo {
+    width: 100%;
+    height: 320px;
+
+    overflow: hidden;
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .6s ease;
+}
+
+.team-member:hover .team-photo img {
+    transform: scale(1.05);
+}
+
+
+/* INFORMATION */
+
+.team-info {
+    padding: 25px 25px 0;
+}
+
+.team-role {
+    color: #9a7b3e;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+.team-info h3 {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 34px;
+
+    font-weight: 500;
+
+    margin: 8px 0;
+}
+
+.team-info p {
+    color: #766b7b;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin: 0 auto 20px;
+
+    max-width: 280px;
+}
+
+
+/* WHATSAPP */
+
+.whatsapp-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: #536744;
+
+    color: white;
+
+    padding: 11px 18px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    transition: .3s ease;
+}
+
+.whatsapp-btn:hover {
+    background: #3f5033;
+
+    transform: translateY(-2px);
+}
+
+.whatsapp-btn span {
+    font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:800px) {
+
+    .team-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 450px;
+
+        gap: 25px;
+    }
+
+    .team-photo {
+        height: 380px;
+    }
+
+}
+@media(max-width:800px) {
+
+    .gallery,
+    .watch,
+    .events {
+        padding: 80px 5%;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 210px;
+        gap: 8px;
+    }
+
+    .watchCard {
+        padding: 55px 20px;
+    }
+
+    .eventGrid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .eventGrid article {
+        padding: 50px 20px;
+    }
+
+}
+/* ==========================================
+   INDIVIDUAL SECTION BACKGROUNDS
+   ========================================== */
+
+/* GALLERY */
+#gallery {
+    background: #f7eef9;
+    color: #4a3158;
+}
+
+#gallery .heading h2 {
+    color: #4a3158;
+}
+
+#gallery .heading small {
+    color: #a765b8;
+}
+
+
+/* WATCH OUR JOURNEY */
+.watch {
+    background: #ead8f0;
+    color: #4a3158;
+}
+
+.watch .watchCard {
+    background: #f7eef9;
+    border: 1px solid #c8a75f;
+}
+
+.watch .watchCard h2 {
+    color: #4a3158;
+}
+
+.watch .watchCard p {
+    color: #66556f;
+}
+
+.watch .play {
+    border-color: #c8a75f;
+    color: #a765b8;
+}
+
+
+/* EVENTS */
+#events {
+    background: #f8f9ee;
+    color: #4a3158;
+}
+
+#events .heading h2 {
+    color: #4a3158;
+}
+
+#events .heading small {
+    color: #a765b8;
+}
+
+.eventGrid article {
+    background: #ffffff;
+    color: #4a3158;
+    border: 1px solid #d8b9e2;
+}
+
+.eventGrid article.featured {
+    background: #d8aed8;
+    color: #4a3158;
+}
+
+.eventGrid article h3 {
+    color: #4a3158;
+}
+
+.eventGrid article p {
+    color: #66556f;
+}
+
+.eventGrid article.featured p {
+    color: #66556f;
+}
+
+.eventGrid article b {
+    color: #9a6b38;
+}
+
+.eventGrid article a {
+    color: #a765b8;
+}
+
+
+/* ==========================================
+   MAKE EACH SECTION VISUALLY STAND ALONE
+   ========================================== */
+
+#gallery,
+.watch,
+#events {
+    margin-bottom: 25px;
+}
+
+
+/* MOBILE */
+@media (max-width: 800px) {
+
+    #gallery,
+    .watch,
+    #events {
+        margin-bottom: 15px;
+    }
+
+}
+/* ==========================================
+   WEDDING VIDEO
+   ========================================== */
+
+.video-container {
+    width: 100%;
+    max-width: 2000px;
+    height: 900px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+
+    .video-container {
+        margin-top: 30px;
+    }
+
+    .video-container video {
+        max-height: 500px;
+    }
+
+}
+/* ==========================================
+   VIDEO SOUND BUTTON
+   ========================================== */
+
+.video-container {
+    position: relative;
+}
+
+.sound-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    background: rgba(42, 22, 69, 0.9);
+    color: #fff;
+
+    border: 1px solid #c8a75f;
+    border-radius: 30px;
+
+    padding: 12px 18px;
+
+    font-size: 11px;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition: all .3s ease;
+}
+
+.sound-btn:hover {
+    background: #c8a75f;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+
+    .sound-btn {
+        bottom: 12px;
+        right: 12px;
+        padding: 10px 14px;
+        font-size: 10px;
+    }
+
+}
+/* ==========================================
+   SUPPORT OUR JOURNEY
+========================================== */
+
+.support-section {
+    background: #2a2d06;
+    color: #dfd8e4;
+    padding: 110px 7%;
+}
+
+.support-intro {
+    max-width: 650px;
+    margin: 20px auto 0;
+    color: #ebe8ec;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.account-grid {
+    max-width: 650px;
+    margin: 60px auto 0;
+}
+
+.account-card {
+    background: #f9e9fd;
+    border: 1px solid rgba(200, 167, 95, .35);
+    padding: 50px 45px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(74, 49, 88, .10);
+    position: relative;
+}
+
+.account-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 25px;
+
+    border: 1px solid #c8a75f;
+
+    color: #ceb786;
+    font-size: 50px;
+}
+
+.account-card > small {
+    color: #9a7b3e;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+.account-card h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 50px;
+    font-weight: 500;
+    margin: 12px 0 35px;
+    color: #4a3158;
+}
+
+.account-detail {
+    border-top: 1px solid #eadfea;
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: left;
+}
+
+.account-detail:last-of-type {
+    border-bottom: 1px solid #eadfea;
+}
+
+.account-detail span {
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #100214;
+}
+
+.account-detail strong {
+    font-size: 20px;
+    color: #4a3158;
+    text-align: right;
+}
+
+.copy-account {
+    margin-top: 30px;
+    padding: 13px 22px;
+
+    border: 1px solid #c8a75f;
+    background: #4a3158;
+    color: #fff;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+.copy-account:hover {
+    background: #c8a75f;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .support-section {
+        padding: 80px 5%;
+    }
+
+    .account-card {
+        padding: 40px 22px;
+    }
+
+    .account-card h3 {
+        font-size: 35px;
+    }
+
+    .account-detail {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .account-detail strong {
+        text-align: left;
+    }
+
+}
