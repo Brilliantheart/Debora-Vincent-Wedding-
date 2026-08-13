@@ -7,7 +7,18 @@
     --cream:#c77fd8;
     --green:#536744;
 }
-header{height:100vh;min-height:680px;position:relative;background:url("assets/gallery-07.jpg") center/cover no-repeat;color:#fff;display:flex;flex-direction:column}.shade{position:absolute;inset:0;background:linear-gradient(#0b061099,#160b20aa 55%,#09040dcc)}nav{position:relative;z-index:2;padding:25px 5%;display:flex;align-items:center;justify-content:space-between}.logo{font:600 34px "Cormorant Garamond"}.logo i{color:#d7ba72}.links{display:flex;gap:30px;text-transform:uppercase;font-size:11px;letter-spacing:2px}.reserve{border:1px solid #ffffff88;border-radius:30px;padding:9px 15px;font-size:11px;text-transform:uppercase;letter-spacing:1px}
+header{height:100vh;min-height:680px;position:relative;background:url("assets/gallery-07.jpg") center/cover no-repeat;color:#fff;display:flex;flex-direction:column}.shade{position:absolute;inset:0;background:linear-gradient(#0b061099,#160b20aa 55%,#09040dcc)}nav{position:relative;z-index:2;padding:25px 5%;display:flex;align-items:center;justify-content:space-between}.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #c8a75f;
+}.links{display:flex;gap:30px;text-transform:uppercase;font-size:11px;letter-spacing:2px}.reserve{border:1px solid #ffffff88;border-radius:30px;padding:9px 15px;font-size:11px;text-transform:uppercase;letter-spacing:1px}
 .heroText{position:relative;z-index:2;text-align:center;margin:auto;padding:40px 20px}.heroText small,.welcome small,.heading small,.rsvpCard>small,.palette small,.watchCard>small{letter-spacing:4px;color:#ad7bd8;font-size:11px}.heroText h1{font:500 clamp(60px,10vw,140px)/.82 "Cormorant Garamond";margin:25px 0}.heroText h1 i{color:#d7ba72}.heroText p{letter-spacing:7px}.heroText span{display:block;opacity:.8;margin:8px 0 28px;font-size:13px}.btn{display:inline-block;background:var(--gold);border:0;color:#fff;padding:14px 25px;letter-spacing:2px;font-size:11px;cursor:pointer}.scroll{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:3px;opacity:.7}
 section{padding:105px 7%}.welcome{text-align:center}.welcome small,.heading small,.rsvpCard>small{color:#c563d0}.welcome h2,.heading h2,.watchCard h2,.rsvpCard h2,.palette h2{font:500 clamp(48px,6vw,78px)/.9 "Cormorant Garamond";margin:18px 0 25px}.welcome h2 i,.heading h2 i,.watchCard h2 i,.rsvpCard h2 i,.palette h2 i,footer i{color:var(--gold)}.welcome>p{max-width:620px;margin:auto;color:#756e75}
 /* ==========================================
@@ -1456,7 +1467,7 @@ footer{background:#160c22;color:white;text-align:center;padding:70px 20px}footer
 
 .team-photo img {
     width: 100%;
-    height: 100%;
+    height: 150%;
 
     object-fit: cover;
 
@@ -1904,4 +1915,9 @@ footer{background:#160c22;color:white;text-align:center;padding:70px 20px}footer
         text-align: left;
     }
 
+}
+.palette h2 {
+    font: 500 clamp(48px, 6vw, 78px)/.9 "Cormorant Garamond";
+    margin: 18px 0 25px;
+    color: #ffffff;
 }
