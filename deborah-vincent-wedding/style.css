@@ -1,4 +1,4 @@
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#dabada;color:#251d29;font-family:"DM Sans",sans-serif}a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#d3aed3;color:#251d29;font-family:"DM Sans",sans-serif}a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}
 :root{
     --purple:#dbc2ee;
     --purple-soft:#dec1f0;
@@ -13,14 +13,14 @@ header{height:100vh;min-height:680px;position:relative;background:url("assets/ga
 }
 
 .logo img {
-    width: 65px;
-    height: 65px;
+    width: 70px;
+    height: 70px;
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid #c8a75f;
-}.links{display:flex;gap:30px;text-transform:uppercase;font-size:11px;letter-spacing:2px}.reserve{border:1px solid #ffffff88;border-radius:30px;padding:9px 15px;font-size:11px;text-transform:uppercase;letter-spacing:1px}
-.heroText{position:relative;z-index:2;text-align:center;margin:auto;padding:40px 20px}.heroText small,.welcome small,.heading small,.rsvpCard>small,.palette small,.watchCard>small{letter-spacing:4px;color:#ad7bd8;font-size:11px}.heroText h1{font:500 clamp(60px,10vw,140px)/.82 "Cormorant Garamond";margin:25px 0}.heroText h1 i{color:#d7ba72}.heroText p{letter-spacing:7px}.heroText span{display:block;opacity:.8;margin:8px 0 28px;font-size:13px}.btn{display:inline-block;background:var(--gold);border:0;color:#fff;padding:14px 25px;letter-spacing:2px;font-size:11px;cursor:pointer}.scroll{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:3px;opacity:.7}
-section{padding:105px 7%}.welcome{text-align:center}.welcome small,.heading small,.rsvpCard>small{color:#c563d0}.welcome h2,.heading h2,.watchCard h2,.rsvpCard h2,.palette h2{font:500 clamp(48px,6vw,78px)/.9 "Cormorant Garamond";margin:18px 0 25px}.welcome h2 i,.heading h2 i,.watchCard h2 i,.rsvpCard h2 i,.palette h2 i,footer i{color:var(--gold)}.welcome>p{max-width:620px;margin:auto;color:#756e75}
+}.links{display:flex;gap:32px;text-transform:uppercase;font-size:30px;letter-spacing:2px}.reserve{border:1px solid #ffffff88;border-radius:30px;padding:9px 15px;font-size:11px;text-transform:uppercase;letter-spacing:1px}
+.heroText{position:relative;z-index:2;text-align:center;margin:auto;padding:40px 20px}.heroText small,.welcome small,.heading small,.rsvpCard>small,.palette small,.watchCard>small{letter-spacing:6px;color:#f5f5f5;font-size:30px}.heroText h1{font:500 clamp(60px,10vw,140px)/.82 "Cormorant Garamond";margin:25px 0}.heroText h1 i{color:#d7ba72}.heroText p{letter-spacing:7px}.heroText span{display:block;opacity:.8;margin:8px 0 28px;font-size:15px}.btn{display:inline-block;background:var(--gold);border:0;color:#fff;padding:14px 25px;letter-spacing:2px;font-size:15px;cursor:pointer}.scroll{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);font-size:20px;letter-spacing:3px;opacity:.7}
+section{padding:105px 7%}.welcome{text-align:center}.welcome small,.heading small,.rsvpCard>small{color:#140118}.welcome h2,.heading h2,.watchCard h2,.rsvpCard h2,.palette h2{font:500 clamp(48px,6vw,78px)/.9 "Cormorant Garamond";margin:18px 0 25px}.welcome h2 i,.heading h2 i,.watchCard h2 i,.rsvpCard h2 i,.palette h2 i,footer i{color:var(--gold)}.welcome>p{max-width:620px;margin:auto;color:#756e75}
 /* ==========================================
    COUNTDOWN CARD
 ========================================== */
@@ -31,7 +31,7 @@ section{padding:105px 7%}.welcome{text-align:center}.welcome small,.heading smal
 
     padding: 45px 50px;
 
-    background: #1e0b1e;
+    background: #390e39;
 
     border: 1px solid rgba(200, 167, 95, .35);
 
@@ -323,7 +323,7 @@ section{padding:105px 7%}.welcome{text-align:center}.welcome small,.heading smal
 
     letter-spacing: 4px;
 
-    font-size: 10px;
+    font-size: 30px;
 }
 
 .watchCard h2 {
@@ -879,7 +879,7 @@ footer{background:#160c22;color:white;text-align:center;padding:70px 20px}footer
 .story-button:hover {
     background: #c8a75f;
 
-    color: #fff;
+    color: #0f0101;
 }
 
 
@@ -898,11 +898,11 @@ footer{background:#160c22;color:white;text-align:center;padding:70px 20px}footer
 }
 
 .story-ending small {
-    color: #d8bf7b;
+    color: #f5f5f4;
 
     letter-spacing: 4px;
 
-    font-size: 10px;
+    font-size: 30px;
 }
 
 .story-ending h3 {
@@ -918,7 +918,7 @@ footer{background:#160c22;color:white;text-align:center;padding:70px 20px}footer
 }
 
 .story-ending h3 i {
-    color: #c8a75f;
+    color: #fcfdfd;
 }
 
 .story-ending p {
@@ -934,7 +934,7 @@ footer{background:#160c22;color:white;text-align:center;padding:70px 20px}footer
 .story-quote {
     margin-top: 45px;
 
-    color: #d8bf7b;
+    color: #130e01;
 
     font-family: "Cormorant Garamond", serif;
 
@@ -1175,8 +1175,8 @@ footer{background:#160c22;color:white;text-align:center;padding:70px 20px}footer
 
 .story-intro {
     max-width: 550px;
-    margin: 20px auto 0;
-    color: #ddd8e1;
+    margin: 30px auto 0;
+    color: #270323;
     line-height: 1.8;
 }
 
@@ -1275,7 +1275,7 @@ footer{background:#160c22;color:white;text-align:center;padding:70px 20px}footer
 }
 
 .story-content .quote {
-    color: #8e7038;
+    color: #181001;
 }
 
 .story-content blockquote {
@@ -1308,7 +1308,7 @@ footer{background:#160c22;color:white;text-align:center;padding:70px 20px}footer
 
     padding-bottom: 8px;
 
-    border-bottom: 1px solid #c8a75f;
+    border-bottom: 1px solid #0b0800;
 
     color: #c7eef0;
 
@@ -1347,7 +1347,7 @@ footer{background:#160c22;color:white;text-align:center;padding:70px 20px}footer
 }
 
 .story-final-quote {
-    color:#8e7038;
+    color:#130d01;
 }
 
 /* ==========================================
@@ -1920,4 +1920,37 @@ footer{background:#160c22;color:white;text-align:center;padding:70px 20px}footer
     font: 500 clamp(48px, 6vw, 78px)/.9 "Cormorant Garamond";
     margin: 18px 0 25px;
     color: #ffffff;
+}
+.heroText p {
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 8px;
+}
+@media (max-width: 800px) {
+    .heroText p {
+        font-size: 18px;
+        letter-spacing: 6px;
+    }
+}
+.heroText h1 {
+    font-size: clamp(70px, 11vw, 155px);
+}
+.welcome h2,
+.heading h2,
+.watchCard h2,
+.rsvpCard h2,
+.palette h2 {
+    font-size: clamp(55px, 7vw, 85px);
+}
+nav {
+    padding: 20px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (max-width: 800px) {
+    .logo img {
+        width: 55px;
+        height: 55px;
+    }
 }
