@@ -1974,3 +1974,238 @@ nav {
 small {
     color: #cd64ca !important;
 }
+/* ==========================================
+   DIGITAL WEDDING INVITATION COVER
+========================================== */
+
+#invitationCover {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #a66eaa 0%,
+            #f4f3f5 55%,
+            #9c5ea1 100%
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+.invitation-content {
+    width: min(90%, 650px);
+    padding: 50px 30px;
+}
+
+/* LOGO */
+
+.invitation-logo {
+    width: 95px;
+    height: 95px;
+
+    margin: 0 auto 30px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: 3px solid #c8a75f;
+
+    box-shadow:
+        0 10px 35px rgba(201, 194, 205, 0.15);
+}
+
+.invitation-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* SMALL LABEL */
+
+.invitation-label {
+    display: block;
+
+    color: #fff;
+
+    font-size: 20px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+/* MAIN HEADING */
+
+.invitation-content h1 {
+    margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(60px, 9vw, 100px);
+
+    font-weight: 500;
+
+    line-height: .85;
+
+    color: #ece7ef;
+}
+
+.invitation-content h1 i {
+    color: #eae59e;
+}
+
+/* MESSAGE */
+
+.invitation-message {
+    max-width: 500px;
+
+    margin: 30px auto;
+
+    color: #eae3ee;
+
+    font-size: 30px;
+
+    line-height: 1.8;
+}
+
+/* COUPLE */
+
+.couple-name {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 60px;
+
+    color: #561575;
+
+    margin-top: 25px;
+}
+
+.couple-name i {
+    color: #c8a75f;
+}
+
+/* DATE */
+
+.invitation-date {
+    margin-top: 10px;
+
+    color: #f2eef3;
+
+    font-size: 50px;
+
+    letter-spacing: 6px;
+}
+
+/* OPEN BUTTON */
+
+#openInvitation {
+    margin-top: 35px;
+
+    padding: 16px 28px;
+
+    border: 1px solid #3c0a3f;
+
+    background: #70366c;
+
+    color: white;
+
+    font-size: 20px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition:
+        .3s ease;
+}
+
+#openInvitation span {
+    margin-left: 12px;
+
+    font-size: 17px;
+}
+
+#openInvitation:hover {
+    background: #ebe7eb;
+
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+
+.invitation-footer {
+    margin-top: 35px;
+
+    color: #f0f0f0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 30px;
+
+    font-style: italic;
+}
+
+/* OPENING ANIMATION */
+
+#invitationCover.opening {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .invitation-content {
+        padding: 30px 20px;
+    }
+
+    .invitation-logo {
+        width: 75px;
+        height: 75px;
+
+        margin-bottom: 25px;
+    }
+
+    .invitation-label {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .invitation-content h1 {
+        font-size: 62px;
+    }
+
+    .invitation-message {
+        font-size: 14px;
+    }
+
+    .couple-name {
+        font-size: 34px;
+    }
+
+    .invitation-date {
+        font-size: 12px;
+        letter-spacing: 4px;
+    }
+}
+#invitationCover .invitation-label {
+    color: #ffffff !important;
+}

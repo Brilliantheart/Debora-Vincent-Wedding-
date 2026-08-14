@@ -141,3 +141,19 @@ function copyAccountNumber() {
     });
 
 }
+// ==========================================
+// DIGITAL INVITATION OPENING
+// ==========================================
+
+const invitationCover = document.querySelector("#invitationCover");
+const openInvitation = document.querySelector("#openInvitation");
+
+openInvitation.addEventListener("click", () => {
+
+    invitationCover.classList.add("opening");
+
+    setTimeout(() => {
+        invitationCover.style.display = "none";
+    }, 1000);
+
+});
