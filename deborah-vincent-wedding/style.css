@@ -1494,15 +1494,17 @@ footer{background:#160c22;color:white;text-align:center;padding:70px 20px}footer
 }
 
 .team-info h3 {
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-size: 34px;
-
-    font-weight: 500;
-
-    margin: 8px 0;
+    font-family: "Cormorant Garamond", serif !important;
+    font-size: 34px !important;
+    font-weight: 500 !important;
+    line-height: 1.05 !important;
+    color: #4a3158 !important;
+    margin: 8px 0 !important;
+    min-height: 72px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
 }
 
 .team-info p {
@@ -1791,7 +1793,7 @@ footer{background:#160c22;color:white;text-align:center;padding:70px 20px}footer
 ========================================== */
 
 .support-section {
-    background: #2a2d06;
+    background: #2f3305;
     color: #dfd8e4;
     padding: 110px 7%;
 }
@@ -1833,7 +1835,7 @@ footer{background:#160c22;color:white;text-align:center;padding:70px 20px}footer
 }
 
 .account-card > small {
-    color: #9a7b3e;
+    color: #060400;
     letter-spacing: 3px;
     font-size: 20px;
 }
@@ -1953,4 +1955,22 @@ nav {
         width: 55px;
         height: 55px;
     }
+}
+.palette {
+    color: #fff;
+}
+
+.palette p {
+    color: #fff;
+}
+.palette p {
+    color: #fff !important;
+}
+.team-member:last-child .team-info h3 {
+    font-size: 34px !important;
+    color: #4a3158 !important;
+    min-height: 72px !important;
+}
+small {
+    color: #cd64ca !important;
 }
